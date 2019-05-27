@@ -45,7 +45,7 @@ In **fun_num**  2,5 : L1-Regularization is used.
 ![results](results.png)
 
 ## Simple Illustration
-An excerpt from Page 2 of the paper. 
+An excerpt from Page 2 of the [paper](https://arxiv.org/abs/1905.09050). 
 
 ![simple example](simple_example.png)
 
@@ -76,7 +76,7 @@ T. Pock and S. Sabach. Inertial proximal alternating linearized minimization (iP
 
 ## License
 
-[Check here.](LICENSE.md)
+[Check here.](LICENSE)
 
 
 
