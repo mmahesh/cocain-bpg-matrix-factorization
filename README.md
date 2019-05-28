@@ -29,7 +29,7 @@ Then to create the plots
     chmod +x generate_plots.sh
     ./generate_plots.sh
 
-Now you can check **fun_figures** folder for various figures. 
+Now you can check **figures** folder for various figures. 
 
 ## Description of results
 
