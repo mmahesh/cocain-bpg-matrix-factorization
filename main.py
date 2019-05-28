@@ -173,12 +173,12 @@ if algo==1:
 	# Filenames creation
 	if exp_option==1:
 		# without non-negativity constraints
-		filename = 'fun_results/bpg_mf_fun_name_'+str(fun_num)+'_dataset_option_'\
+		filename = 'results/bpg_mf_fun_name_'+str(fun_num)+'_dataset_option_'\
 				+str(dataset_option)+'_abs_fun_num_'+str(abs_fun_num)\
 				+'_breg_num_'+str(breg_num) + '_lam_val_'+str(lam)+'_rank_val_'+str(rank)+'.txt'
 	elif exp_option==2:
 		# NMF settings with non-negativity constraints
-		filename = 'fun_results/bpg_mf_fun_name_'+str(fun_num)+'_dataset_option_'\
+		filename = 'results/bpg_mf_fun_name_'+str(fun_num)+'_dataset_option_'\
 				+str(dataset_option)+'_abs_fun_num_'+str(abs_fun_num)\
 				+'_breg_num_'+str(breg_num) + '_lam_val_'+str(lam)+'_rank_val_'+str(rank)\
 				+'_exp_option_'+str(exp_option)+'.txt'
@@ -231,12 +231,12 @@ elif algo==2:
 	# Filenames creation
 	if exp_option==1:
 		# without non-negativity constraints
-		filename = 'fun_results/palm_mf_fun_name_'+str(fun_num)+'_dataset_option_'+str(dataset_option)\
+		filename = 'results/palm_mf_fun_name_'+str(fun_num)+'_dataset_option_'+str(dataset_option)\
 				+'_abs_fun_num_'+str(abs_fun_num)+'_breg_num_'+str(breg_num)\
 				+'_beta_'+str(beta)+ '_lam_val_'+str(lam)+'_rank_val_'+str(rank)+'.txt'
 	elif exp_option==2:
 		# NMF settings with non-negativity constraints
-		filename = 'fun_results/palm_mf_fun_name_'+str(fun_num)+'_dataset_option_'+str(dataset_option)\
+		filename = 'results/palm_mf_fun_name_'+str(fun_num)+'_dataset_option_'+str(dataset_option)\
 				+'_abs_fun_num_'+str(abs_fun_num)+'_breg_num_'+str(breg_num)\
 				+'_beta_'+str(beta)+ '_lam_val_'+str(lam)+'_rank_val_'+str(rank)+'_exp_option'+str(exp_option)+'.txt'
 	else:
@@ -288,13 +288,13 @@ elif algo==3:
 	# Filenames creation
 	if exp_option==1:
 		# without non-negativity constraints
-		filename = 'fun_results/cocain_mf_fun_name_'+str(fun_num)+'_dataset_option_'+str(dataset_option)\
+		filename = 'results/cocain_mf_fun_name_'+str(fun_num)+'_dataset_option_'+str(dataset_option)\
 					+'_abs_fun_num_'+str(abs_fun_num)+'_breg_num_'+str(breg_num)+\
 					 '_lam_val_'+str(lam)+'_rank_val_'+str(rank)\
 					+'_uL_est_'+str(uL_est)+'_lL_est_'+str(lL_est)+'.txt'
 	elif exp_option==2:
 		# NMF settings with non-negativity constraints
-		filename = 'fun_results/cocain_mf_fun_name_'+str(fun_num)+'_dataset_option_'+str(dataset_option)\
+		filename = 'results/cocain_mf_fun_name_'+str(fun_num)+'_dataset_option_'+str(dataset_option)\
 					+'_abs_fun_num_'+str(abs_fun_num)+'_breg_num_'+str(breg_num)+ \
 					'_lam_val_'+str(lam)+'_rank_val_'+str(rank)\
 					+'_exp_option_'+str(exp_option)+'_uL_est_'+str(uL_est)+'_lL_est_'+str(lL_est)+'.txt'
@@ -362,13 +362,13 @@ elif algo==4:
 	# Filenames creation
 	if exp_option==1:
 		# without non-negativity constraints
-		filename = 'fun_results/bpg_mf_wb_fun_name_'+str(fun_num)+'_dataset_option_'+str(dataset_option)\
+		filename = 'results/bpg_mf_wb_fun_name_'+str(fun_num)+'_dataset_option_'+str(dataset_option)\
 					+'_abs_fun_num_'+str(abs_fun_num)+'_breg_num_'+str(breg_num)+ \
 					'_lam_val_'+str(lam)+'_rank_val_'+str(rank)\
 					+'_uL_est_'+str(uL_est)+'_lL_est_'+str(lL_est)+'.txt'
 	elif exp_option==2:
 		# NMF settings with non-negativity constraints
-		filename = 'fun_results/bpg_mf_wb_fun_name_'+str(fun_num)+'_dataset_option_'+str(dataset_option)\
+		filename = 'results/bpg_mf_wb_fun_name_'+str(fun_num)+'_dataset_option_'+str(dataset_option)\
 					+'_abs_fun_num_'+str(abs_fun_num)+'_breg_num_'+str(breg_num)+ \
 					'_lam_val_'+str(lam)+'_rank_val_'+str(rank)\
 					+'_exp_option_'+str(exp_option)+'_uL_est_'+str(uL_est)+'_lL_est_'+str(lL_est)+'.txt'

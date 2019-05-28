@@ -1,6 +1,7 @@
 from subprocess import call
 import numpy as np
-import time
+from time import sleep
+
 
 lam_vals_to_run = [0,1e-1] # Regularization vals
 rank_vals_to_run = [5] # Rank
@@ -32,6 +33,8 @@ count = 0
 for item in cart_prod:
 	temp_list = item
 	print(temp_list)
+
+	# command to execute
 	command_to_exec = ' python3 main.py --lam=' + str(temp_list[0]) \
 	+ ' --rank=' + str(temp_list[1]) \
 	+ ' --dataset_option=' + str(temp_list[2])\
@@ -41,11 +44,15 @@ for item in cart_prod:
 	+ ' --algo=' + str(temp_list[6])\
 	+ ' --breg_num=' + str(temp_list[7])\
 	+ ' --fun_num=' + str(temp_list[8])\
-	+ ' --abs_fun_num=' + str(temp_list[9])
+	+ ' --abs_fun_num=' + str(temp_list[9])\
+	+ ' &' # for going to next iteration without job in background.
+
 
 	print("Command executing is " + command_to_exec)
 	call(command_to_exec, shell=True)
 	print('done executing in '+str(count))
 	count += 1
+	sleep(60)
+
 
 

@@ -56,65 +56,65 @@ my_markers = ['','','','','','','']
 if fun_num == 0:
 	# for L2 Regularization for U,Z and lam = 0
 	files = {
-		1: 'fun_results/cocain_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_uL_est_0.1_lL_est_0.1.txt',
-		2: 'fun_results/bpg_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5.txt',
-		3: 'fun_results/palm_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_1_beta_0.0_lam_val_0.0_rank_val_5.txt',
-		4: 'fun_results/palm_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_1_beta_0.2_lam_val_0.0_rank_val_5.txt',
-		5: 'fun_results/palm_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_1_beta_0.4_lam_val_0.0_rank_val_5.txt',
-		6: 'fun_results/bpg_mf_wb_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_uL_est_0.1_lL_est_0.1.txt',
+		1: 'results/cocain_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_uL_est_0.1_lL_est_0.1.txt',
+		2: 'results/bpg_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5.txt',
+		3: 'results/palm_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_1_beta_0.0_lam_val_0.0_rank_val_5.txt',
+		4: 'results/palm_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_1_beta_0.2_lam_val_0.0_rank_val_5.txt',
+		5: 'results/palm_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_1_beta_0.4_lam_val_0.0_rank_val_5.txt',
+		6: 'results/bpg_mf_wb_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_uL_est_0.1_lL_est_0.1.txt',
 	}
 if fun_num == 1:
 	# for L2 Regularization for U,Z and lam = 1e-1
 	files = {
-		1: 'fun_results/cocain_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_uL_est_0.1_lL_est_0.1.txt',
-		2: 'fun_results/bpg_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5.txt',
-		3: 'fun_results/palm_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_1_beta_0.0_lam_val_0.1_rank_val_5.txt',
-		4: 'fun_results/palm_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_1_beta_0.2_lam_val_0.1_rank_val_5.txt',
-		5: 'fun_results/palm_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_1_beta_0.4_lam_val_0.1_rank_val_5.txt',
-		6: 'fun_results/bpg_mf_wb_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_uL_est_0.1_lL_est_0.1.txt',
+		1: 'results/cocain_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_uL_est_0.1_lL_est_0.1.txt',
+		2: 'results/bpg_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5.txt',
+		3: 'results/palm_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_1_beta_0.0_lam_val_0.1_rank_val_5.txt',
+		4: 'results/palm_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_1_beta_0.2_lam_val_0.1_rank_val_5.txt',
+		5: 'results/palm_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_1_beta_0.4_lam_val_0.1_rank_val_5.txt',
+		6: 'results/bpg_mf_wb_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_uL_est_0.1_lL_est_0.1.txt',
 
 	}
 if fun_num == 2:
 	# for L1 Regularization for U,Z and 
 	files = {
-		1: 'fun_results/cocain_mf_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_uL_est_0.1_lL_est_0.1.txt',
-		2: 'fun_results/bpg_mf_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5.txt',
-		3: 'fun_results/palm_mf_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_1_beta_0.0_lam_val_0.1_rank_val_5.txt',
-		4: 'fun_results/palm_mf_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_1_beta_0.2_lam_val_0.1_rank_val_5.txt',
-		5: 'fun_results/palm_mf_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_1_beta_0.4_lam_val_0.1_rank_val_5.txt',
-		6: 'fun_results/bpg_mf_wb_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_uL_est_0.1_lL_est_0.1.txt',
+		1: 'results/cocain_mf_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_uL_est_0.1_lL_est_0.1.txt',
+		2: 'results/bpg_mf_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5.txt',
+		3: 'results/palm_mf_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_1_beta_0.0_lam_val_0.1_rank_val_5.txt',
+		4: 'results/palm_mf_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_1_beta_0.2_lam_val_0.1_rank_val_5.txt',
+		5: 'results/palm_mf_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_1_beta_0.4_lam_val_0.1_rank_val_5.txt',
+		6: 'results/bpg_mf_wb_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_uL_est_0.1_lL_est_0.1.txt',
 	}
 
 
 if fun_num == 3:
 	# for L2 Regularization for U,Z and lam = 0 # exp_option_2
 	files = {
-		1: 'fun_results/cocain_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_exp_option_2_uL_est_0.1_lL_est_0.1.txt',
-		2: 'fun_results/bpg_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_exp_option_2.txt',
-		3: 'fun_results/palm_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_1_beta_0.0_lam_val_0.0_rank_val_5_exp_option2.txt',
-		4: 'fun_results/palm_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_1_beta_0.2_lam_val_0.0_rank_val_5_exp_option2.txt',
-		5: 'fun_results/palm_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_1_beta_0.4_lam_val_0.0_rank_val_5_exp_option2.txt',
-		6: 'fun_results/bpg_mf_wb_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_exp_option_2_uL_est_0.1_lL_est_0.1.txt',
+		1: 'results/cocain_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_exp_option_2_uL_est_0.1_lL_est_0.1.txt',
+		2: 'results/bpg_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_exp_option_2.txt',
+		3: 'results/palm_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_1_beta_0.0_lam_val_0.0_rank_val_5_exp_option2.txt',
+		4: 'results/palm_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_1_beta_0.2_lam_val_0.0_rank_val_5_exp_option2.txt',
+		5: 'results/palm_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_1_beta_0.4_lam_val_0.0_rank_val_5_exp_option2.txt',
+		6: 'results/bpg_mf_wb_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_exp_option_2_uL_est_0.1_lL_est_0.1.txt',
 	}
 if fun_num == 4:
 	# for L2 Regularization for U,Z and lam = 1e-1 # exp_option_2
 	files = {
-		1: 'fun_results/cocain_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2_uL_est_0.1_lL_est_0.1.txt',
-		2: 'fun_results/bpg_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2.txt',
-		3: 'fun_results/palm_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_1_beta_0.0_lam_val_0.1_rank_val_5_exp_option2.txt',
-		4: 'fun_results/palm_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_1_beta_0.2_lam_val_0.1_rank_val_5_exp_option2.txt',
-		5: 'fun_results/palm_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_1_beta_0.4_lam_val_0.1_rank_val_5_exp_option2.txt',
-		6: 'fun_results/bpg_mf_wb_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2_uL_est_0.1_lL_est_0.1.txt',
+		1: 'results/cocain_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2_uL_est_0.1_lL_est_0.1.txt',
+		2: 'results/bpg_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2.txt',
+		3: 'results/palm_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_1_beta_0.0_lam_val_0.1_rank_val_5_exp_option2.txt',
+		4: 'results/palm_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_1_beta_0.2_lam_val_0.1_rank_val_5_exp_option2.txt',
+		5: 'results/palm_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_1_beta_0.4_lam_val_0.1_rank_val_5_exp_option2.txt',
+		6: 'results/bpg_mf_wb_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2_uL_est_0.1_lL_est_0.1.txt',
 	}
 if fun_num == 5:
 	# for L1 Regularization for U,Z # exp_option_2
 	files = {
-		1: 'fun_results/cocain_mf_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2_uL_est_0.1_lL_est_0.1.txt',
-		2: 'fun_results/bpg_mf_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2.txt',
-		3: 'fun_results/palm_mf_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_1_beta_0.0_lam_val_0.1_rank_val_5_exp_option2.txt',
-		4: 'fun_results/palm_mf_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_1_beta_0.2_lam_val_0.1_rank_val_5_exp_option2.txt',
-		5: 'fun_results/palm_mf_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_1_beta_0.4_lam_val_0.1_rank_val_5_exp_option2.txt',
-		6: 'fun_results/bpg_mf_wb_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2_uL_est_0.1_lL_est_0.1.txt',
+		1: 'results/cocain_mf_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2_uL_est_0.1_lL_est_0.1.txt',
+		2: 'results/bpg_mf_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2.txt',
+		3: 'results/palm_mf_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_1_beta_0.0_lam_val_0.1_rank_val_5_exp_option2.txt',
+		4: 'results/palm_mf_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_1_beta_0.2_lam_val_0.1_rank_val_5_exp_option2.txt',
+		5: 'results/palm_mf_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_1_beta_0.4_lam_val_0.1_rank_val_5_exp_option2.txt',
+		6: 'results/bpg_mf_wb_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2_uL_est_0.1_lL_est_0.1.txt',
 	}
 
 
@@ -197,7 +197,7 @@ for i in opt_vals:
 
 	color_count +=1
 
-figure_name1 = 'fun_figures/'+'func_vals_fun_num_'+str(fun_num)
+figure_name1 = 'figures/'+'func_vals_fun_num_'+str(fun_num)
 
 # legends
 ax1.legend(loc='upper right', fontsize=label_font_size)
