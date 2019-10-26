@@ -31,6 +31,16 @@ Then to create the plots
     chmod +x generate_plots.sh
     ./generate_plots.sh
 
+
+To generate statistical evaluation results 
+
+    python run_seed_exps.py 
+
+Then to create the plots
+    
+    chmod +x generate_seed_plots.sh
+    ./generate_seed_plots.sh
+
 Now you can check **figures** folder for various figures. 
 
 ## Description of results
