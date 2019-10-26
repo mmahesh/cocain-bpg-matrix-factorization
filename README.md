@@ -42,7 +42,7 @@ In **fun_num**  2,5 : L1-Regularization is used.
 
 ## Results
 
-![results](results.png)
+![results](results2.png)
 
 ## Simple Illustration
 An excerpt from Page 2 of the [paper](https://arxiv.org/abs/1905.09050). 
@@ -62,7 +62,10 @@ An excerpt from Page 2 of the [paper](https://arxiv.org/abs/1905.09050).
 ## Contact 
 Mahesh Chandra Mukkamala (mukkamala@math.uni-sb.de)
 
+
 ## References
+
+
 
 M.C. Mukkamala, P. Ochs: Beyond Alternating Updates for Matrix Factorization with Inertial Bregman Proximal Gradient Algorithms. ArXiv e-prints, arXiv:1905.09050, 2019. 
 

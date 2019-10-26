@@ -9,8 +9,8 @@ def main_func(A, U, Z, lam, fun_num=1):
 	if fun_num==1:
 		# L2-regularization
 		return 0.5*(np.linalg.norm(A-np.matmul(U,Z))**2) \
-		+ lam*0.5*(np.linalg.norm(U)**2) + \
-		+ lam*0.5*(np.linalg.norm(Z)**2)
+			+ lam*0.5*(np.linalg.norm(U)**2) \
+			+ lam*0.5*(np.linalg.norm(Z)**2)
 	if fun_num==2:
 		# L1-regularization
 		return 0.5*(np.linalg.norm(A-np.matmul(U,Z))**2) \
@@ -30,7 +30,7 @@ def grad(A, U, Z, lam, fun_num=1, option=1):
 	# option 1 gives all gradients
 	# option 2 gives gradient with respect to U
 	# option 3 gives gradient with respect to Z
-	if fun_num==0:
+	if fun_num in [0,1,2]:
 		# grad u, grad z
 		if option==1:
 			return np.matmul(np.matmul(U,Z)-A, Z.T) , np.matmul(U.T, np.matmul(U,Z)-A) 
@@ -41,35 +41,6 @@ def grad(A, U, Z, lam, fun_num=1, option=1):
 		else:
 			pass
 
-	# L2-regularization 
-	# This uses the entire function as smooth part
-	# option 1 gives all gradients
-	# option 2 gives gradient with respect to U
-	# option 3 gives gradient with respect to Z
-	# for fun_num=1 and fun_num=2 the gradients are not used.
-	if fun_num==1:
-		# grad u, grad z
-		if option ==1:
-			return np.matmul(np.matmul(U,Z)-A, Z.T) + lam*U, np.matmul(U.T, np.matmul(U,Z)-A) + lam*Z
-		elif option == 2:
-			return np.matmul(np.matmul(U,Z)-A, Z.T) + lam*U
-		elif option == 3:
-			return np.matmul(U.T, np.matmul(U,Z)-A) + lam*Z
-		else:
-			pass
-
-	# For L1 Regularization
-	# Can also be used for L2 Regularization depending on the smooth part.
-	if fun_num==2:
-		# grad u, grad z
-		if option==1:
-			return np.matmul(np.matmul(U,Z)-A, Z.T) , np.matmul(U.T, np.matmul(U,Z)-A) 
-		elif option==2:
-			return np.matmul(np.matmul(U,Z)-A, Z.T) 
-		elif option==3:
-			return np.matmul(U.T, np.matmul(U,Z)-A) 
-		else:
-			pass
 
 
 def abs_func(A, U, Z, U1, Z1, lam, abs_fun_num=1, fun_num=1):
@@ -104,33 +75,59 @@ def make_update(U1, Z1,uL_est=1,lam=0,fun_num=1, abs_fun_num=1,breg_num=1, A=1, 
 		grad_h_1_b = Z1*(np.linalg.norm(U1)**2 + np.linalg.norm(Z1)**2)
 		grad_h_2_a = U1
 		grad_h_2_b = Z1
-
+		sym_setting = 0
 		
 		if abs_fun_num == 3:
 			# Code for No-Regularization  and L2 Regularization
 			if exp_option==1:
+
 				# Code for No-Regularization  and L2 Regularization
 				# No-Regularization is equivalent to L2 Regularization with lam=0
 				# compute P^k
 				p_l = (1/uL_est)*grad_u - (c_1*grad_h_1_a + c_2*grad_h_2_a)
 				# compute Q^k
 				q_l = (1/uL_est)*grad_z - (c_1*grad_h_1_b + c_2*grad_h_2_b)
-				# solving cubic equation
-				coeff = [c_1*(np.linalg.norm(p_l)**2 + np.linalg.norm(q_l)**2), 0,(c_2 + (lam/uL_est)), -1]
-				temp_y = np.roots(coeff)[-1].real
-				return (-1)*temp_y*p_l, (-1)*temp_y*q_l
+				if sym_setting == 0: #default option
+					# solving cubic equation
+					coeff = [c_1*(np.linalg.norm(p_l)**2 + np.linalg.norm(q_l)**2), 0,(c_2 + (lam/uL_est)), -1]
+					temp_y = np.roots(coeff)[-1].real
+					return (-1)*temp_y*p_l, (-1)*temp_y*q_l
+				else:
+					p_new = p_l + q_l.T
+					coeff = [4*c_1*(np.linalg.norm(p_new)**2), 0,2*(c_2 + (lam/uL_est)), -1]
+					temp_y = np.roots(coeff)[-1].real
+					return (-1)*temp_y*p_new, (-1)*temp_y*(p_new.T)
 			elif exp_option==2:
 				# NMF case.
 				# Code for No-Regularization  and L2 Regularization
-
-				# compute P^k
-				p_l = np.maximum(0,-(1/uL_est)*grad_u + (c_1*grad_h_1_a + c_2*grad_h_2_a))
-				# compute Q^k
-				q_l = np.maximum(0,-(1/uL_est)*grad_z + (c_1*grad_h_1_b + c_2*grad_h_2_b))
-				# solving cubic equation
-				coeff = [c_1*(np.linalg.norm(p_l)**2 + np.linalg.norm(q_l)**2), 0,(c_2 + (lam/uL_est)), -1]
-				temp_y = np.roots(coeff)[-1].real
-				return temp_y*p_l, temp_y*q_l
+				if sym_setting == 0:
+					
+					# compute P^k
+					p_l = np.maximum(0,-(1/uL_est)*grad_u + (c_1*grad_h_1_a + c_2*grad_h_2_a))
+					# compute Q^k
+					q_l = np.maximum(0,-(1/uL_est)*grad_z + (c_1*grad_h_1_b + c_2*grad_h_2_b))
+					
+					# solving cubic equation
+					temp_pnrm = np.sqrt((np.linalg.norm(p_l)**2 + np.linalg.norm(q_l)**2))/np.sqrt(2)
+					# print('temp_pnrm '+ str(temp_pnrm))
+					
+					# technique to improve the numerical stability
+					# same update anyway.
+					coeff = [c_1*2, 0,(c_2 + (lam/uL_est)), -(temp_pnrm)]
+					temp_y = np.roots(coeff)[-1].real
+					
+					return temp_y*p_l/temp_pnrm, temp_y*q_l/temp_pnrm
+					
+				else:
+					temp_pl = -(1/uL_est)*grad_u + (c_1*grad_h_1_a + c_2*grad_h_2_a)
+					temp_ql = -(1/uL_est)*grad_z + (c_1*grad_h_1_b + c_2*grad_h_2_b)
+					# compute P^k
+					p_new = np.maximum(0,temp_pl+temp_ql.T)
+				
+					# solving cubic equation
+					coeff = [4*c_1*(np.linalg.norm(p_new)**2), 0,2*(c_2 + (lam/uL_est)), -1]
+					temp_y = np.roots(coeff)[-1].real
+					return temp_y*p_new, temp_y*(p_new.T)
 			else:
 				raise
 
@@ -161,12 +158,13 @@ def make_update(U1, Z1,uL_est=1,lam=0,fun_num=1, abs_fun_num=1,breg_num=1, A=1, 
 				temp_mat2 = np.outer(np.ones(nx),np.ones(ny))
 
 				# compute P^k
-				tp_l = -(1/uL_est)*grad_u + (c_1*grad_h_1_a + c_2*grad_h_2_a) - lam*(temp_mat1)
+				tp_l = -(1/uL_est)*grad_u + (c_1*grad_h_1_a + c_2*grad_h_2_a) - (lam/uL_est)*(temp_mat1)
 				p_l = np.maximum(0,tp_l)
 				# compute Q^k
-				tq_l = -(1/uL_est)*grad_z + (c_1*grad_h_1_b + c_2*grad_h_2_b) -lam*(temp_mat2)
+				tq_l = -(1/uL_est)*grad_z + (c_1*grad_h_1_b + c_2*grad_h_2_b) - (lam/uL_est)*(temp_mat2)
 				q_l = np.maximum(0,tq_l)
 				# solving cubic equation
+				# print(np.linalg.norm(p_l)**2 + np.linalg.norm(q_l)**2)
 				coeff = [c_1*(np.linalg.norm(p_l)**2 + np.linalg.norm(q_l)**2), 0,(c_2), -1]
 				temp_y = np.roots(coeff)[-1].real
 				return temp_y*p_l, temp_y*q_l
@@ -182,6 +180,8 @@ def make_update(U1, Z1,uL_est=1,lam=0,fun_num=1, abs_fun_num=1,breg_num=1, A=1, 
 			grad_u = grad(A, U1, Z1, lam, fun_num=fun_num, option=2)
 			# compute Lipschitz constant
 			L2 =  np.linalg.norm(np.mat(Z1) * np.mat(Z1.T))
+			L2 = np.max([L2,1e-4])
+			# print('L2 val '+ str(L2))
 			if beta>0:
 				# since we use convex regularizers
 				# step-size is less restrictive
@@ -189,7 +189,6 @@ def make_update(U1, Z1,uL_est=1,lam=0,fun_num=1, abs_fun_num=1,breg_num=1, A=1, 
 			else:
 				# from PALM paper 1.1 is just a scaling factor
 				# can be set to any value >1.
-
 				step_size = (1/(1.1*L2))
 
 			# Update step for No-Regularization  and L2 Regularization
@@ -200,6 +199,8 @@ def make_update(U1, Z1,uL_est=1,lam=0,fun_num=1, abs_fun_num=1,breg_num=1, A=1, 
 			grad_z = grad(A, U, Z1, lam, fun_num=fun_num, option=3)
 			# compute Lipschitz constant
 			L1 =  np.linalg.norm(np.mat(U.T) * np.mat(U))
+			L1 = np.max([L1,1e-4])
+			# print('L1 val '+ str(L1))
 			if beta>0:
 				# since we use convex regularizers
 				# step-size is less restrictive
@@ -222,6 +223,7 @@ def make_update(U1, Z1,uL_est=1,lam=0,fun_num=1, abs_fun_num=1,breg_num=1, A=1, 
 			grad_u = grad(A, U1, Z1, lam, fun_num=fun_num, option=2)
 			# compute Lipschitz constant
 			L2 =  np.linalg.norm(np.mat(Z1) * np.mat(Z1.T))
+			L2 = np.max([L2,1e-4])
 			if beta>0:
 				# since we use convex regularizers
 				# step-size is less restrictive
@@ -233,15 +235,15 @@ def make_update(U1, Z1,uL_est=1,lam=0,fun_num=1, abs_fun_num=1,breg_num=1, A=1, 
 
 			# compute update step with U
 			tU1 = ((U1 - step_size*grad_u))
-			U = np.maximum(0, np.abs(-tU1)-lam*(step_size))*np.sign(-tU1)
+			U = np.maximum(0, np.abs(tU1)-lam*(step_size))*np.sign(tU1)
 
 			# compute extrapolation
 			Z1 = Z1+beta*(Z1-Z2)
 			grad_z = grad(A, U, Z1, lam, fun_num=fun_num, option=3)
 
 			# compute Lipschitz constant
-			L1 =  np.linalg.norm(np.mat(U.T) * np.mat(U))
-
+			L1 = np.linalg.norm(np.mat(U.T) * np.mat(U))
+			L1 = np.max([L1,1e-4])
 			if beta>0:
 				# since we use convex regularizers
 				# step-size is less restrictive
@@ -252,7 +254,7 @@ def make_update(U1, Z1,uL_est=1,lam=0,fun_num=1, abs_fun_num=1,breg_num=1, A=1, 
 
 			# compute update step with z
 			tZ1 = ((Z1 - step_size*grad_z))
-			Z = np.maximum(0, np.abs(-tZ1)-lam*(step_size))*np.sign(-tZ1)
+			Z = np.maximum(0, np.abs(tZ1)-lam*(step_size))*np.sign(tZ1)
 
 			return U,Z
 
@@ -283,6 +285,7 @@ def breg( U, Z, U1, Z1, breg_num=1, c_1=1,c_2=1):
 		if abs(temp_2) <= 1e-10:
 			# to fix numerical issues
 			temp_2 = 0
+
 		if c_1*temp_1 + c_2*temp_2<0:
 			# to fix numerical issues
 			return 0

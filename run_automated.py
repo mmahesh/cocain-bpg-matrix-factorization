@@ -3,11 +3,11 @@ import numpy as np
 from time import sleep
 
 
-lam_vals_to_run = [0,1e-1] # Regularization vals
+lam_vals_to_run = [0,1e-1] #Regularization vals
 rank_vals_to_run = [5] # Rank
-data_exp_options_to_run = [[3,1],[2,2]] #[[2,2],[3,1]] # for full results run [[2,2],[3,1]]
+data_exp_options_to_run = [[3,1]]#[[3,1],[2,2]] #[[2,2],[3,1]] # for full results run [[2,2],[3,1]]
 betas_to_run = [0.0,0.4,0.2] #beta values 0 for PALM and others for iPALM
-force_exp_to_run = [0] #0 to not force the experiment if the file exists
+force_exp_to_run = [1] #0 to not force the experiment if the file exists
 algo_breg_nums_to_run = [[1,2],[2,1],[3,2],[4,2]] # combination of algo and breg_num  described below
 fun_num_abs_fun_num_vals_to_run = [[2,2],[1,3]] # combination of fun_num and abs_fun_num described below
 
@@ -17,6 +17,7 @@ fun_num_abs_fun_num_vals_to_run = [[2,2],[1,3]] # combination of fun_num and abs
 # Beyond Alternating Updates for Matrix Factorization with Inertial Bregman Proximal Gradient Algorithms
 # https://arxiv.org/abs/1905.09050
 
+# 94.3044
 # create combinations
 cart_prod = [(a,b,c[0], c[1], e, f, g[0],g[1], h[0],h[1])\
 for a in lam_vals_to_run \
@@ -52,7 +53,7 @@ for item in cart_prod:
 	call(command_to_exec, shell=True)
 	print('done executing in '+str(count))
 	count += 1
-	sleep(60)
+	# sleep(60)
 
 
 

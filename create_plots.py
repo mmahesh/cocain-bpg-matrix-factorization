@@ -56,65 +56,65 @@ my_markers = ['','','','','','','']
 if fun_num == 0:
 	# for L2 Regularization for U,Z and lam = 0
 	files = {
-		1: 'results/cocain_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_uL_est_0.1_lL_est_0.1.txt',
+		1: 'results/cocain_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_uL_est_0.01_lL_est_0.01.txt',
 		2: 'results/bpg_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5.txt',
 		3: 'results/palm_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_1_beta_0.0_lam_val_0.0_rank_val_5.txt',
 		4: 'results/palm_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_1_beta_0.2_lam_val_0.0_rank_val_5.txt',
 		5: 'results/palm_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_1_beta_0.4_lam_val_0.0_rank_val_5.txt',
-		6: 'results/bpg_mf_wb_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_uL_est_0.1_lL_est_0.1.txt',
+		6: 'results/bpg_mf_wb_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_uL_est_0.01_lL_est_0.01.txt',
 	}
 if fun_num == 1:
 	# for L2 Regularization for U,Z and lam = 1e-1
 	files = {
-		1: 'results/cocain_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_uL_est_0.1_lL_est_0.1.txt',
+		1: 'results/cocain_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_uL_est_0.01_lL_est_0.01.txt',
 		2: 'results/bpg_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5.txt',
 		3: 'results/palm_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_1_beta_0.0_lam_val_0.1_rank_val_5.txt',
 		4: 'results/palm_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_1_beta_0.2_lam_val_0.1_rank_val_5.txt',
 		5: 'results/palm_mf_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_1_beta_0.4_lam_val_0.1_rank_val_5.txt',
-		6: 'results/bpg_mf_wb_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_uL_est_0.1_lL_est_0.1.txt',
+		6: 'results/bpg_mf_wb_fun_name_1_dataset_option_3_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_uL_est_0.01_lL_est_0.01.txt',
 
 	}
 if fun_num == 2:
 	# for L1 Regularization for U,Z and 
 	files = {
-		1: 'results/cocain_mf_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_uL_est_0.1_lL_est_0.1.txt',
+		1: 'results/cocain_mf_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_uL_est_0.01_lL_est_0.01.txt',
 		2: 'results/bpg_mf_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5.txt',
 		3: 'results/palm_mf_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_1_beta_0.0_lam_val_0.1_rank_val_5.txt',
 		4: 'results/palm_mf_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_1_beta_0.2_lam_val_0.1_rank_val_5.txt',
 		5: 'results/palm_mf_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_1_beta_0.4_lam_val_0.1_rank_val_5.txt',
-		6: 'results/bpg_mf_wb_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_uL_est_0.1_lL_est_0.1.txt',
+		6: 'results/bpg_mf_wb_fun_name_2_dataset_option_3_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_uL_est_0.01_lL_est_0.01.txt',
 	}
 
 
 if fun_num == 3:
 	# for L2 Regularization for U,Z and lam = 0 # exp_option_2
 	files = {
-		1: 'results/cocain_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_exp_option_2_uL_est_0.1_lL_est_0.1.txt',
+		1: 'results/cocain_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_exp_option_2_uL_est_0.01_lL_est_0.01.txt',
 		2: 'results/bpg_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_exp_option_2.txt',
 		3: 'results/palm_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_1_beta_0.0_lam_val_0.0_rank_val_5_exp_option2.txt',
 		4: 'results/palm_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_1_beta_0.2_lam_val_0.0_rank_val_5_exp_option2.txt',
 		5: 'results/palm_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_1_beta_0.4_lam_val_0.0_rank_val_5_exp_option2.txt',
-		6: 'results/bpg_mf_wb_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_exp_option_2_uL_est_0.1_lL_est_0.1.txt',
+		6: 'results/bpg_mf_wb_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.0_rank_val_5_exp_option_2_uL_est_0.01_lL_est_0.01.txt',
 	}
 if fun_num == 4:
 	# for L2 Regularization for U,Z and lam = 1e-1 # exp_option_2
 	files = {
-		1: 'results/cocain_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2_uL_est_0.1_lL_est_0.1.txt',
+		1: 'results/cocain_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2_uL_est_0.01_lL_est_0.01.txt',
 		2: 'results/bpg_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2.txt',
 		3: 'results/palm_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_1_beta_0.0_lam_val_0.1_rank_val_5_exp_option2.txt',
 		4: 'results/palm_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_1_beta_0.2_lam_val_0.1_rank_val_5_exp_option2.txt',
 		5: 'results/palm_mf_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_1_beta_0.4_lam_val_0.1_rank_val_5_exp_option2.txt',
-		6: 'results/bpg_mf_wb_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2_uL_est_0.1_lL_est_0.1.txt',
+		6: 'results/bpg_mf_wb_fun_name_1_dataset_option_2_abs_fun_num_3_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2_uL_est_0.01_lL_est_0.01.txt',
 	}
 if fun_num == 5:
 	# for L1 Regularization for U,Z # exp_option_2
 	files = {
-		1: 'results/cocain_mf_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2_uL_est_0.1_lL_est_0.1.txt',
+		1: 'results/cocain_mf_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2_uL_est_0.01_lL_est_0.01.txt',
 		2: 'results/bpg_mf_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2.txt',
 		3: 'results/palm_mf_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_1_beta_0.0_lam_val_0.1_rank_val_5_exp_option2.txt',
 		4: 'results/palm_mf_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_1_beta_0.2_lam_val_0.1_rank_val_5_exp_option2.txt',
 		5: 'results/palm_mf_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_1_beta_0.4_lam_val_0.1_rank_val_5_exp_option2.txt',
-		6: 'results/bpg_mf_wb_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2_uL_est_0.1_lL_est_0.1.txt',
+		6: 'results/bpg_mf_wb_fun_name_2_dataset_option_2_abs_fun_num_2_breg_num_2_lam_val_0.1_rank_val_5_exp_option_2_uL_est_0.01_lL_est_0.01.txt',
 	}
 
 
@@ -133,6 +133,12 @@ ax4 = makeup_for_plot(ax4)
 fig5 = plt.figure()
 ax5 = fig5.add_subplot(111)
 ax5 = makeup_for_plot(ax5)
+fig6 = plt.figure()
+ax6 = fig6.add_subplot(111)
+ax6 = makeup_for_plot(ax6)
+fig7 = plt.figure()
+ax7 = fig7.add_subplot(111)
+ax7 = makeup_for_plot(ax7)
 
 
 label_font_size = 13
@@ -182,11 +188,18 @@ for i in opt_vals:
 				label=labels_dict[i],color=colors[color_count], linewidth=my_line_width,marker=my_markers[i-1])
 	ax3.loglog((np.arange(nb_epoch)+1),(best_train_objective_vals[:nb_epoch] - min_fun_val)/(best_train_objective_vals[0] - min_fun_val),\
 				label=labels_dict[i],color=colors[color_count], linewidth=my_line_width,marker=my_markers[i-1])
+
+	ax6.plot((np.arange(nb_epoch)+1), (best_train_objective_vals[:nb_epoch] - min_fun_val)/(best_train_objective_vals[0] - min_fun_val),
+            label=labels_dict[i], color=colors[color_count], linewidth=my_line_width, marker=my_markers[i-1])
+
 	ax5.loglog((np.arange(nb_epoch)+1),(best_train_objective_vals[:nb_epoch] - min_fun_val)/(best_train_objective_vals[0]),\
 				label=labels_dict[i],color=colors[color_count], linewidth=my_line_width,marker=my_markers[i-1])
 
 	ax1.plot((np.arange(nb_epoch)+1),(best_train_objective_vals[:nb_epoch]),\
 			label=labels_dict[i],color=colors[color_count], linewidth=my_line_width,marker=my_markers[i-1])
+	
+	ax7.plot((np.arange(nb_epoch)+1), (best_train_objective_vals[:nb_epoch]),
+          label=labels_dict[i], color=colors[color_count], linewidth=my_line_width, marker=my_markers[i-1])
 
 	best_time_vals = best_time_vals - best_time_vals[0]
 	best_time_vals[0]=1e-2
@@ -197,14 +210,22 @@ for i in opt_vals:
 
 	color_count +=1
 
+if fun_num in [0, 1, 2]:
+	ax4.set_ylim(1e-4, 1e4)
+	ax3.set_ylim(1e-4, 1)
+	ax6.set_ylim(0.0, 0.025)
+	ax7.set_ylim(1600, 1800)
+
 figure_name1 = 'figures/'+'func_vals_fun_num_'+str(fun_num)
 
 # legends
 ax1.legend(loc='upper right', fontsize=label_font_size)
 ax2.legend(loc='upper right', fontsize=label_font_size)
-ax3.legend(loc='upper right', fontsize=label_font_size)
-ax4.legend(loc='upper right', fontsize=label_font_size)
-ax5.legend(loc='upper right', fontsize=label_font_size)	
+ax3.legend(loc='lower left', fontsize=label_font_size)
+ax4.legend(loc='lower left', fontsize=label_font_size)
+ax5.legend(loc='lower left', fontsize=label_font_size)	
+ax6.legend(loc='upper right', fontsize=label_font_size)
+ax7.legend(loc='upper right', fontsize=label_font_size)
 
 
 ax1.set_xlabel('Iterations (log scale)',fontsize=legend_font_size)
@@ -243,3 +264,20 @@ do_tight_layout_for_fig(fig5)
 fig5.savefig(figure_name1+'_compare_optval3_.png', dpi=fig5.dpi)
 fig5.savefig(figure_name1+'_compare_optval3_.pdf', dpi=fig5.dpi)
 
+
+ax6.set_xlabel('Iterations', fontsize=legend_font_size)
+ax6.set_ylabel(
+	r'$\frac{\Psi({\bf U^k},{\bf Z^k}) - v({\mathcal P})}{\Psi({\bf U^1},{\bf Z^1}) -v({\mathcal P})}$', fontsize=legend_font_size)
+
+do_tight_layout_for_fig(fig6)
+fig6.savefig(figure_name1+'_compare_optval4_.png', dpi=fig3.dpi)
+fig6.savefig(figure_name1+'_compare_optval4_.pdf', dpi=fig3.dpi)
+
+
+ax7.set_xlabel('Iterations ', fontsize=legend_font_size)
+ax7.set_ylabel('Function value ', fontsize=legend_font_size)
+
+
+do_tight_layout_for_fig(fig7)
+fig7.savefig(figure_name1+'_linear_scale_.png', dpi=fig7.dpi)
+fig7.savefig(figure_name1+'_linear_scale_.pdf', dpi=fig7.dpi)
